@@ -34,7 +34,7 @@ http :8080
 # Helm
 ## Package
 ```sh
-helm package --sign --key 'helm' --keyring ~/.gnupg/pubring.gpg helm/
+helm package charts/whoami-go/
 ```
 
 ## Upload to repository

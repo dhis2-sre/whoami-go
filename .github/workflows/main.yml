@@ -112,7 +112,7 @@ jobs:
       - name: Lint Helm
         uses: WyriHaximus/github-action-helm3@v2
         with:
-          exec: helm lint helm/
+          exec: helm lint charts/whoami-go/
           kubeconfig: ${{ secrets.KUBECONFIG }}
 
       - name: Test chart

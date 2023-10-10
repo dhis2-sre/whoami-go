@@ -1,10 +1,11 @@
 environments:
   dev:
     values:
-      - kubeContext: nuc
+#      - kubeContext: nuc
+      - kubeContext: arn:aws:eks:eu-central-1:767224633206:cluster/instance-cluster-test
       - name: whoami-go
-      - hostname: whoami-go.dev.fitfit.dk
-      - certIssuer: letsencrypt-staging
+      - hostname: dev.whoami-go.im.dhis2.org
+      - certIssuer: cert-issuer-prod
       - replicaCount: 1
 
   prod:
@@ -26,7 +27,7 @@ environments:
 releases:
   - name: "{{ .Values.name }}"
     namespace: whoami-go-{{ .Environment.Name }}
-    chart: helm/
+    chart: ./charts/whoami-go/
     kubeContext: "{{ .Values.kubeContext }}"
     values:
       - ingress:
