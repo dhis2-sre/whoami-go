@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  whoami-go:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-10-10T04:15:57.382049838Z"
+    description: A Helm chart for Kubernetes
+    digest: 5a953ac321cc9a0447fff91b27117f4d2e894646b2487e46a1ab540ac1b93647
+    name: whoami-go
+    type: application
+    urls:
+    - https://github.com/dhis2-sre/whoami-go/releases/download/whoami-go-0.6.0/whoami-go-0.6.0.tgz
+    version: 0.6.0
+generated: "2023-10-10T04:15:57.382054438Z"
