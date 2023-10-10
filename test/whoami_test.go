@@ -1,7 +1,7 @@
 package test
 
 import (
-	. "github.com/tonsV2/whoami-go/internal"
+	. "github.com/dhis2-sre/whoami-go/internal"
 	"net/http"
 	"net/http/httptest"
 	"os"

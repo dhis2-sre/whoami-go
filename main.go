@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	. "github.com/tonsV2/whoami-go/internal"
+	. "github.com/dhis2-sre/whoami-go/internal"
 	"log"
 	"net/http"
 	"os"
