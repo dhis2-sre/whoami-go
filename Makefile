@@ -1,6 +1,6 @@
 tag ?= latest
 
-version ?= $(shell yq e '.version' helm/Chart.yaml)
+version ?= $(shell yq e '.version' charts/whoami-go/Chart.yaml)
 
 app:
 	go build -o whoami-go -ldflags "-s -w" .
