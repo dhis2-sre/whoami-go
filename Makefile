@@ -11,12 +11,7 @@ image:
 alpine-image:
 	IMAGE_TAG=$(tag) docker-compose build prod && IMAGE_TAG=$(tag) docker-compose push prod
 
-helm-package:
-	@helm package helm/
+test:
+	docker compose up test --build
 
-publish-helm:
-	@curl --user "$(CHARTMUSEUM_AUTH_USER):$(CHARTMUSEUM_AUTH_PASS)" \
-        -F "chart=@whoami-go-$(version).tgz" \
-        https://helm-charts.fitfit.dk/api/charts
-
-.PHONY: image helm publish-helm
+.PHONY: image test
